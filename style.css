@@ -1,0 +1,458 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+  background: #f7f9fc;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 72px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  border-bottom: 1px solid #e7ebf2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #18223b;
+}
+
+.logo span {
+  color: #4f46e5;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+nav a {
+  font-size: 15px;
+  color: #4b5563;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #4f46e5;
+}
+
+.nav-book {
+  background: #4f46e5;
+  color: white !important;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+.menu-btn {
+  display: none;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 540px;
+  padding: 80px 7%;
+  display: grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap: 60px;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2ff, #ffffff);
+}
+
+.eyebrow {
+  color: #4f46e5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.hero h1,
+.form-intro h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+
+.hero-content > p:not(.eyebrow) {
+  max-width: 600px;
+  color: #5b6474;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  cursor: pointer;
+  padding: 13px 22px;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.btn:hover,
+.card-btn:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: #4f46e5;
+  color: white;
+}
+
+.secondary,
+.reset-btn {
+  background: white;
+  color: #4f46e5;
+  border: 1px solid #cfd5e3;
+}
+
+.hero-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(30, 41, 59, .12);
+}
+
+.book-icon {
+  font-size: 64px;
+  margin-bottom: 15px;
+}
+
+.hero-card h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.hero-card p {
+  color: #687386;
+}
+
+.section {
+  padding: 80px 7%;
+  background: white;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading h2,
+.info-section h2 {
+  font-size: 36px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  border: 1px solid #e3e7ef;
+  border-radius: 14px;
+  padding: 28px;
+  background: #fff;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, .05);
+}
+
+.card-icon {
+  font-size: 42px;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #687386;
+  margin-bottom: 20px;
+}
+
+.card-btn {
+  display: inline-block;
+  color: #4f46e5;
+  font-weight: 800;
+}
+
+.info-section {
+  padding: 70px 7%;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.steps {
+  display: grid;
+  gap: 15px;
+}
+
+.steps div {
+  background: white;
+  border: 1px solid #e5e9f0;
+  padding: 18px 22px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.steps strong {
+  color: #4f46e5;
+}
+
+footer {
+  background: #111827;
+  color: #cbd5e1;
+  padding: 50px 7%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+
+footer .logo {
+  color: white;
+}
+
+footer h4 {
+  color: white;
+  margin-bottom: 8px;
+}
+
+footer a:hover {
+  color: white;
+}
+
+.copyright {
+  grid-column: 1 / -1;
+  padding-top: 20px;
+  border-top: 1px solid #374151;
+  font-size: 13px;
+}
+
+.form-page {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 70px 25px;
+}
+
+.form-intro {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.form-intro h1 {
+  font-size: 45px;
+}
+
+.form-intro > p:last-child {
+  color: #667085;
+}
+
+form {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, .07);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.field label span,
+.check-label span {
+  color: #dc2626;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #d4dae5;
+  border-radius: 8px;
+  padding: 12px 13px;
+  font: inherit;
+  color: #172033;
+  background: white;
+  outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, .1);
+}
+
+.radio-group {
+  display: flex;
+  gap: 25px;
+  padding: 10px 0;
+}
+
+.radio-group label,
+.check-label {
+  font-weight: 500;
+}
+
+.radio-group input,
+.check-label input {
+  width: auto;
+  margin-right: 7px;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  min-height: 19px;
+  margin-top: 4px;
+}
+
+.hint {
+  color: #667085;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.success-box {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #ecfdf3;
+  border: 1px solid #a7f3d0;
+  color: #166534;
+}
+
+@media (max-width: 800px) {
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px 7%;
+    flex-direction: column;
+    align-items: stretch;
+    box-shadow: 0 10px 20px rgba(0,0,0,.08);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hero,
+  .info-section {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+
+  .copyright {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 55px 6%;
+  }
+
+  .section,
+  .info-section {
+    padding: 55px 6%;
+  }
+
+  .form-page {
+    padding: 50px 15px;
+  }
+
+  form {
+    padding: 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .field.full {
+    grid-column: auto;
+  }
+
+  .hero-buttons,
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+  }
+}

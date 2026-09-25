@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserve a Book | LibReserve</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="index.html">Lib<span>Reserve</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="index.html#books">Books</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+      <a class="nav-book" href="reservation.html">Reserve a Book</a>
+    </nav>
+  </header>
+
+  <main class="form-page">
+    <div class="form-intro">
+      <p class="eyebrow">BOOK RESERVATION</p>
+      <h1>Reserve Your Book</h1>
+      <p>Enter your details below. All required fields must be completed before submission.</p>
+    </div>
+
+    <form id="reservationForm" novalidate>
+      <div class="form-grid">
+
+        <div class="field">
+          <label for="name">Full Name <span>*</span></label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+          <small class="error" id="nameError"></small>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address <span>*</span></label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          <small class="error" id="emailError"></small>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone Number <span>*</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+          <small class="error" id="phoneError"></small>
+        </div>
+
+        <div class="field">
+          <label for="book">Select Book <span>*</span></label>
+          <select id="book" name="book" required>
+            <option value="">-- Choose a book --</option>
+            <option>Atomic Habits</option>
+            <option>Clean Code</option>
+            <option>Around the World</option>
+            <option>Introduction to Algorithms</option>
+          </select>
+          <small class="error" id="bookError"></small>
+        </div>
+
+        <div class="field">
+          <label for="date">Reservation Date <span>*</span></label>
+          <input type="date" id="date" name="date" required>
+          <small class="error" id="dateError"></small>
+        </div>
+
+        <div class="field">
+          <label for="password">Account Password <span>*</span></label>
+          <input type="password" id="password" name="password"
+                 placeholder="At least 6 characters" required>
+          <small class="error" id="passwordError"></small>
+        </div>
+
+        <div class="field full">
+          <label>Membership Type <span>*</span></label>
+          <div class="radio-group">
+            <label><input type="radio" name="membership" value="Student"> Student</label>
+            <label><input type="radio" name="membership" value="General"> General</label>
+          </div>
+          <small class="error" id="membershipError"></small>
+        </div>
+
+        <div class="field full">
+          <label for="notes">Additional Request</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any special request?"></textarea>
+          <small class="error" id="notesError"></small>
+        </div>
+
+        <div class="field">
+          <label for="idFile">Upload ID (optional)</label>
+          <input type="file" id="idFile" name="idFile" accept=".jpg,.jpeg,.png,.pdf">
+          <small class="hint">JPG, PNG or PDF</small>
+        </div>
+
+        <div class="field terms-field">
+          <label class="check-label">
+            <input type="checkbox" id="terms" name="terms">
+            I agree to the library reservation rules. <span>*</span>
+          </label>
+          <small class="error" id="termsError"></small>
+        </div>
+
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn primary">Submit Reservation</button>
+        <button type="reset" class="btn reset-btn" id="resetBtn">Reset</button>
+      </div>
+
+      <div id="successBox" class="success-box" hidden></div>
+    </form>
+  </main>
+
+  <footer>
+    <div>
+      <a class="logo" href="index.html">Lib<span>Reserve</span></a>
+      <p>Simple library book reservation system.</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>library@example.com</p>
+      <p>+880 1700-000000</p>
+    </div>
+    <p class="copyright">© 2026 LibReserve. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
